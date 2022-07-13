@@ -149,7 +149,7 @@ def downLoadDirFromCos(prefix):
         # dest_file_path = "/tmp/cos-access-log/" + year + "/" + month + "/" + day + "/"    # 本地目录
         qcloud_files = listCurrentDir(start_prefix) # 获取云端目录下的文件
         for file in qcloud_files:
-            file['Key'] = file['Key'].replace(start_prefix, '')
+            # file['Key'] = file['Key'].replace(start_prefix, '')
             download_file_infos.append(file['Key'])
         
 
