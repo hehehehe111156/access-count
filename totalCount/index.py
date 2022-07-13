@@ -17,9 +17,9 @@ from qcloud_cos.cos_threadpool import SimpleThreadPool
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 #############################################################################################
 # 设置用户属性, 包括 secret_id, secret_key, region等。Appid 已在CosConfig中移除，请在参数 Bucket 中带上 Appid。Bucket 由 BucketName-Appid 组成
-secret_id = 'AKIDhEWXHm0xd2A1e06vTkkTv60dz4yd2A1c'     # 替换为用户的 SecretId，请登录访问管理控制台进行查看和管理，https://console.cloud.tencent.com/cam/capi
-secret_key = 'MSHp78rJVVFivsYx5wWprc6IDsFMCl34'   # 替换为用户的 SecretKey，请登录访问管理控制台进行查看和管理，https://console.cloud.tencent.com/cam/capi
-region = 'ap-beijing'      # 替换为用户的 region，已创建桶归属的region可以在控制台查看，https://console.cloud.tencent.com/cos5/bucket
+secret_id = ''     # 替换为用户的 SecretId，请登录访问管理控制台进行查看和管理，https://console.cloud.tencent.com/cam/capi
+secret_key = ''   # 替换为用户的 SecretKey，请登录访问管理控制台进行查看和管理，https://console.cloud.tencent.com/cam/capi
+region = ''      # 替换为用户的 region，已创建桶归属的region可以在控制台查看，https://console.cloud.tencent.com/cos5/bucket
                             # COS支持的所有region列表参见https://cloud.tencent.com/document/product/436/6224
 token = None               # 如果使用永久密钥不需要填入token，如果使用临时密钥需要填入，临时密钥生成和使用指引参见https://cloud.tencent.com/document/product/436/14048
 scheme = 'https'           # 指定使用 http/https 协议来访问 COS，默认为 https，可不填
@@ -28,7 +28,7 @@ config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Toke
 client = CosS3Client(config)
 
 # 用户的 bucket 信息
-test_bucket = 'usefortest-1312797073'
+test_bucket = ''
 start_prefix = 'cos-access-log/'
 # 对象存储依赖 分隔符 '/' 来模拟目录语义，
 # 使用默认的空分隔符可以列出目录下面的所有子节点，实现类似本地目录递归的效果,
