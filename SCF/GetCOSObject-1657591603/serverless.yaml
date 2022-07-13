@@ -1,0 +1,27 @@
+app: GetCOSObject-1657591603
+component: scf
+inputs:
+  cls:
+    logsetId: 0ad14b43-b834-4583-bed0-9be2e219c5bb
+    topicId: 39f720a4-1c79-416a-bbef-99d9b8ac52cb
+  description: 本示例配置了 COS 触发器，当有文件上传到对应的 COS bucket时，会触发云函数执行，并把文件下载到本地临时目录，用做后续处理。
+  eip: false
+  handler: index.main_handler
+  initTimeout: 65
+  memorySize: 128
+  msgTTL: 21600
+  name: GetCOSObject-1657591603
+  namespace: default
+  publicAccess: true
+  region: ap-beijing
+  retryNum: 2
+  role: SCF_ExecuteRole
+  runtime: Python3.6
+  src: ./src
+  timeout: 5
+  type: event
+name: ap-beijing_default_GetCOSObject-1657591603
+org: '1312797073'
+stage: dev
+# When using this configuration file for deployment, make sure the file name is "serverless.yml".
+# For more information: https://github.com/serverless-components/tencent-scf/blob/master/docs/configure.md

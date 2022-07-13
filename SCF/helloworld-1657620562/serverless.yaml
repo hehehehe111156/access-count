@@ -1,0 +1,26 @@
+app: helloworld-1657620562
+component: scf
+inputs:
+  cls:
+    logsetId: 0ad14b43-b834-4583-bed0-9be2e219c5bb
+    topicId: 39f720a4-1c79-416a-bbef-99d9b8ac52cb
+  description: helloworld 空白模板函数
+  eip: false
+  handler: index.main_handler
+  initTimeout: 65
+  memorySize: 128
+  msgTTL: 21600
+  name: helloworld-1657620562
+  namespace: default
+  publicAccess: true
+  region: ap-beijing
+  retryNum: 2
+  runtime: Python3.7
+  src: ./src
+  timeout: 3
+  type: event
+name: ap-beijing_default_helloworld-1657620562
+org: '1312797073'
+stage: dev
+# When using this configuration file for deployment, make sure the file name is "serverless.yml".
+# For more information: https://github.com/serverless-components/tencent-scf/blob/master/docs/configure.md
